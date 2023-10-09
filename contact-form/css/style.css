@@ -1,0 +1,109 @@
+form#contact-form {
+    background: aliceblue;
+    padding: 30px 30px 0px 30px;
+    border: 1px solid;
+    box-shadow: -7px -7px #888888;
+}
+
+textarea#form_message {
+    height: 270px;
+}
+
+[type=submit] {
+    margin-bottom: -18px;
+}
+
+.lines {
+    position: relative;
+}
+
+.lines::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, rgba(252, 176, 69, 1) 0%, rgba(253, 29, 29, 1) 57%, rgba(131, 58, 180, 1)100%);
+    width: 37%;
+    height: 15px;
+    left: 0px;
+    top: 15%;
+}
+
+.lines::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 57%, rgba(252, 176, 69, 1) 100%);
+    width: 37%;
+    height: 15px;
+    right: 0px;
+    top: 15%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media(max-width:991px) {
+
+    .lines::before {
+        width: 32%;
+    }
+
+    .lines::after {
+        width: 32%;
+    }
+}
+
+@media(max-width:767px) {
+    .lines::before {
+        width: 27%;
+    }
+
+    .lines::after {
+        width: 27%;
+    }
+
+    .row .col-md-6:first-child {
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width:480px) {
+    .lines::before {
+        width: 18%;
+    }
+
+    .lines::after {
+        width: 18%;
+    }
+}
